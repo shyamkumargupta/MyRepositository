@@ -1,0 +1,29 @@
+git config --global user.email "shyamkumargupta55@gmail.com"
+git config --global user.name "shyamkumar"
+
+Getting & Creating Projects
+Command	Description
+git init	Initialize a local Git repository
+Basic Snapshotting
+Command	Description
+
+git add [file-name.txt]	Add a file to the staging area
+git add -A	Add all new and changed files to the staging area
+git status	Check status
+git commit -m "[commit message]"	Commit changes
+git remote add origin repoName ssh://git@github.com/[username]/[repository-name].git	Add a remote repository
+git push origin [branch name]	Push a branch to your remote repository
+git clone repoName ssh://git@github.com/[username]/[repository-name].git	Create a local copy of a remote repository
+git pull origin [branch name]	Pull changes from remote repository
+(use "git rm --cached <file>..." to unstage)
+
+git rm -r [file-name.txt]	Remove a file (or folder)
+
+Sharing & Updating Projects
+Command	Description
+git push -u origin [branch name]	Push changes to remote repository (and remember the branch)
+git push	Push changes to remote repository (remembered branch)
+git push origin --delete [branch name]	Delete a remote branch
+git pull	Update local repository to the newest commit
+
+git remote set-url origin ssh://git@github.com/[username]/[repository-name].git	Set a repository's origin branch to SSH

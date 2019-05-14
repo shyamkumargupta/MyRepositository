@@ -1,0 +1,44 @@
+<h1  style='color:red'><center>CHECK MARRIAGE ELIGIBILITY</center></h1>
+<script lang="javaScript">
+            function validation(frm) {
+            //read form data
+				var name=frm.name.value;
+				var age=frm.age.value;
+				//client side form validation logic
+				if(name==""){
+				document.getElementById("nameErr").innerHTML="name is mendatory";
+			//frm.aname.focus();
+				return false;
+				}
+				 if(age==""){
+				 //	frm.aage.focus();
+				//alert("age is mendatory");
+				document.getElementById("ageErr").innerHTML="age is mendatory";
+				return false;
+				}
+	     	 	  else if(isNaN(age)){
+	     	 	  	//frm.aage.focus();
+				//alert("age must numeric value");
+				document.getElementById("ageErr").innerHTML="age must numeric value";
+		         return false;
+				}
+		
+				 else if((age<1||age>125)){
+				 	//frm.aage.focus();
+				//alert("age must range of 1-125 value");
+				document.getElementById("ageErr").innerHTML="age must range of 1-125 value";
+				return false;
+				}
+		 	 
+			  
+			 	return true;
+			}
+</script>
+<form action="marriageurl" method="Get" onsubmit="return validation(this)">
+<center>person name		 <input type="text"name="name"><span id="nameErr"></span></center><br>
+<center>person age		<input type="password"name="age" ><span id="ageErr"></span></center><br>	
+<center>Gender	 <input type="radio"name="gender" value="M">Male
+ &nbsp;&nbsp;
+   <input type="radio"name="gender" value="F" checked >Female    </center><br>																		 
+<center><input type="submit" value="check marriage eligibility"></center><br>
+</form> 
